@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "4e009317-4c63-4739-9f0e-10931d45d331",
+		"name": "hotel/post w7 heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10018275"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "取得所有使用者",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://young-harbor-17995.herokuapp.com/user",
+							"protocol": "https",
+							"host": [
+								"young-harbor-17995",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "取得個人資料",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODdiMGQ0YjAwZTlmYmQ4OGQ4NzIxMSIsIm5hbWUiOiJOaWNrIiwic2V4IjoiTWFsZSIsIm5vdGUiOiLmuKzoqaYiLCJpYXQiOjE2NTMwNjAzMDIsImV4cCI6MTY1MzY2NTEwMn0.lSoMAlt_YlvinKaHQdiXF651uLiRIxhlax1GGFVqjk8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://young-harbor-17995.herokuapp.com/user/profile",
+							"protocol": "https",
+							"host": [
+								"young-harbor-17995",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "註冊",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nick\",\r\n    \"password\": \"000000\",\r\n    \"confirmPassword\": \"000000\",\r\n    \"email\": \"aaaaa@gmail.com\",\r\n    \"sex\":\"Male\",\r\n    \"note\":\"測試\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://young-harbor-17995.herokuapp.com/user/sign_up",
+							"protocol": "https",
+							"host": [
+								"young-harbor-17995",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登入",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aaaaa@gmail.com\",\r\n    \"password\": \"000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://young-harbor-17995.herokuapp.com/user/sign_in",
+							"protocol": "https",
+							"host": [
+								"young-harbor-17995",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "重設密碼",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODNhZTcxYzM1OWJmZGEwYzg1NzFmYSIsIm5hbWUiOiJOaWNrIiwiaWF0IjoxNjUyODA1MDkxLCJleHAiOjE2NTM0MDk4OTF9.ZDWkmeJIzIGORJOxREq1IcHDUnVEmewjGqEp-xUKPjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Bearer",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"\",\r\n    \"newPasswordConfirm\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://young-harbor-17995.herokuapp.com/user/updatePassword",
+							"protocol": "https",
+							"host": [
+								"young-harbor-17995",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "uploadSingleImage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODdiMGQ0YjAwZTlmYmQ4OGQ4NzIxMSIsIm5hbWUiOiJOaWNrIiwic2V4IjoiTWFsZSIsIm5vdGUiOiLmuKzoqaYiLCJpYXQiOjE2NTMwNjAzMDIsImV4cCI6MTY1MzY2NTEwMn0.lSoMAlt_YlvinKaHQdiXF651uLiRIxhlax1GGFVqjk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "a",
+						"value": "dd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "test",
+							"type": "file",
+							"src": "/C:/Users/admin/Desktop/bg_login.jpg"
+						},
+						{
+							"key": "what",
+							"value": "'??'",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://young-harbor-17995.herokuapp.com/upload/uploadSingleImage",
+					"protocol": "https",
+					"host": [
+						"young-harbor-17995",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"upload",
+						"uploadSingleImage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
